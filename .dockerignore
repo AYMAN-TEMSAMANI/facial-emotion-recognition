@@ -1,0 +1,9 @@
+.git
+.gitignore
+data/
+archive/
+docs/
+notebooks/
+*.pth
+.venv/
+webcam/.venv/

@@ -1,0 +1,15 @@
+# Ignore datasets and heavy files
+data/
+archive/
+*.pth
+*.csv
+
+# Python and virtual environments
+__pycache__/
+*.pyc
+.venv/
+webcam/.venv/
+.ipynb_checkpoints/
+
+# Docs
+docs/
