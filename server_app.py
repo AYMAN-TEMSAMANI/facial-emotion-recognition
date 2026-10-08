@@ -2,14 +2,14 @@ import os
 import cv2
 import numpy as np
 from flask import Flask, request, jsonify
-from tensorflow.keras.models import load_model
+import tf_keras as keras
 
 app = Flask(__name__)
 
 # Model path resolution
 MODEL_PATH = os.path.join('models', 'best_cnn_model.h5')
-print(f'[SYSTEM] Loading model from {MODEL_PATH}...')
-model = load_model(MODEL_PATH)
+print(f'[SYSTEM] Loading model from {MODEL_PATH} using tf_keras...')
+model = keras.models.load_model(MODEL_PATH, compile=False)
 print('[SYSTEM] Model loaded successfully.')
 
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
